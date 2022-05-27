@@ -97,10 +97,10 @@ def main():
     print("Successfully converted xml to csv.")
     if args.labelMapDir:
         os.makedirs(args.labelMapDir, exist_ok=True)
-        label_map_path = os.path.join(args.labelMapDir, "label_map.pbtxt")
+        label_map_path = os.path.join(args.labelMapDir, "labelmap.pbtxt")
         print("Generate `{}`".format(label_map_path))
 
-        # Create the `label_map.pbtxt` file
+        # Create the `labelmap.pbtxt` file
         pbtxt_content = ""
         for i, class_name in enumerate(classes_names):
             pbtxt_content = (
