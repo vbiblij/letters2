@@ -25,7 +25,7 @@ class TFRecord:
         items = labelmap.split('item')[1:]
         items_dict = {}
         for item in items:
-            name = str(item.split('name')[1].split(': ')[1].split('}')[0])
+            name = str(item.split('name')[1].split(': ')[1].split('}')[0].split('\'')[1])
             name_id = int(item.split('name')[0].split(": ")[1])
 
             items_dict[name] = name_id
